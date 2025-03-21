@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ввод текста</title>
 <body>
-    <h1>Введите текст</h1>
-    <input type="text" id="userInput" placeholder="Введите текст">
-    <button onclick="checkInput()">Проверить</button>
+    <h1>Связаться</h1>
+    <input type="text" id="userInput" placeholder="Связаться">
+    <button onclick="checkInput()">Помолиться</button>
     <p id="message"></p> <!-- Здесь появится сообщение -->
 
     <script>
@@ -19,11 +19,11 @@
             const messageElement = document.getElementById('message');
 
             // Проверяем введённый текст
-            if (userInput === "секрет") {
-                messageElement.textContent = "Правильно! Вы ввели секретное слово.";
+            if (userInput === "отвёртка") {
+                messageElement.textContent = "Мы ждём тебя";
                 messageElement.style.color = "green"; // Меняем цвет текста
             } else {
-                messageElement.textContent = "Неправильно. Попробуйте ещё раз.";
+                messageElement.textContent = "НЕПРАВИЛЬНО";
                 messageElement.style.color = "red"; // Меняем цвет текста
             }
         }
