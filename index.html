@@ -10,32 +10,30 @@
     <button style="position: relative; left: 800px; top: 750px;" onclick="checkInput()">Анализ</button>
   <p style="position: relative; left: 800px; top: 750px;" id="message"></p>
     <script>
-       // Массив с фразами и сообщениями
-        const phrases = [
-            { phrase: "привет", message: "Привет! Как дела?" },
-            { phrase: "пока", message: "До свидания! Удачи!" },
-            { phrase: "секрет", message: "Вы нашли секретное слово!" },
-            { phrase: "как дела", message: "У меня всё отлично, спасибо!" },
-            { phrase: "что нового", message: "Ничего особенного, а у вас?" },
-            { phrase: "как тебя зовут", message: "Меня зовут Бот!" },
-            { phrase: "сколько времени", message: "Сейчас " + new Date().toLocaleTimeString() },
-            { phrase: "спасибо", message: "Пожалуйста! Обращайтесь!" },
-            { phrase: "погода", message: "Сегодня солнечно и тепло!" },
-            { phrase: "любимый цвет", message: "Мой любимый цвет — синий!" }
-        ];
+       // Объект с фразами и сообщениями
+        const phrases = {
+            "привет": "Привет! Как дела?",
+            "пока": "До свидания! Удачи!",
+            "секрет": "Вы нашли секретное слово!",
+            "как дела": "У меня всё отлично, спасибо!",
+            "что нового": "Ничего особенного, а у вас?",
+            "как тебя зовут": "Меня зовут Бот!",
+            "сколько времени": "Сейчас " + new Date().toLocaleTimeString(),
+            "спасибо": "Пожалуйста! Обращайтесь!",
+            "погода": "Сегодня солнечно и тепло!",
+            "любимый цвет": "Мой любимый цвет — синий!"
+        };
 
         function checkInput() {
-            // Получаем введённый текст
+            // Получаем введённый текст и приводим к нижнему регистру
             const userInput = document.getElementById('userInput').value.toLowerCase();
 
             // Получаем элемент для вывода сообщения
             const messageElement = document.getElementById('message');
 
-            // Ищем совпадение в массиве
-            const foundPhrase = phrases.find(item => userInput.includes(item.phrase));
-
-            if (foundPhrase) {
-                messageElement.textContent = foundPhrase.message; // Выводим сообщение
+            // Проверяем, есть ли введённая фраза в объекте
+            if (phrases.hasOwnProperty(userInput)) {
+                messageElement.textContent = phrases[userInput]; // Выводим сообщение
                 messageElement.style.color = "green"; // Меняем цвет текста
             } else {
                 messageElement.textContent = "Я не понимаю эту фразу. Попробуйте ещё раз.";
