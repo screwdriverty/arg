@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ввод текста</title>
+<body>
+    <h1>Введите текст</h1>
+    <input type="text" id="userInput" placeholder="Введите текст">
+    <button onclick="checkInput()">Проверить</button>
+    <p id="message"></p> <!-- Здесь появится сообщение -->
+
+    <script>
+        function checkInput() {
+            // Получаем введённый текст
+            const userInput = document.getElementById('userInput').value;
+
+            // Получаем элемент для вывода сообщения
+            const messageElement = document.getElementById('message');
+
+            // Проверяем введённый текст
+            if (userInput === "секрет") {
+                messageElement.textContent = "Правильно! Вы ввели секретное слово.";
+                messageElement.style.color = "green"; // Меняем цвет текста
+            } else {
+                messageElement.textContent = "Неправильно. Попробуйте ещё раз.";
+                messageElement.style.color = "red"; // Меняем цвет текста
+            }
+        }
+    </script>
+</body>
+</html>
     <title>ПВЁСОЙТЭ)</title>
     <body style="background-color: black;">
     </body>
