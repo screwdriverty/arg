@@ -8,7 +8,7 @@
     <h1>Введите текст</h1>
     <input type="text" id="userInput" placeholder="Напиши мне)" style="position: relative; left: 800px; top: 750px;">
     <button style="position: relative; left: 800px; top: 750px;" onclick="checkInput()">Анализ</button>
-  <p  style="position: relative; left: 800px; top: 750px;" id="message"></p>
+  <p style="position: relative; left: 800px; top: 750px;" id="message"></p>
     <script>
         function checkInput() {
             // Получаем введённый текст
@@ -18,7 +18,7 @@
             const messageElement = document.getElementById('message');
 
             // Проверяем введённый текст
-            if (userInput === ""Убийца"/ "Кто убийца"/ "Убийца Родиона"") {
+            if (userInput === "Убийца"/ "Кто убийца"/ "Убийца Родиона") {
                 messageElement.textContent = "https://youtu.be/dQw4w9WgXcQ?si=PDH7uftigo4O9pyf";
                 messageElement.style.color = "green"; // Меняем цвет текста
             } else {
