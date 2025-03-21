@@ -5,27 +5,22 @@
     <title>КРНЕДИ</title>
 <head>
 <body>
-    <h1>Введите текст</h1>
+ <h1>Введите текст</h1>
     <input type="text" id="userInput" placeholder="Напиши мне)" style="position: relative; left: 800px; top: 750px;">
     <button style="position: relative; left: 800px; top: 750px;" onclick="checkInput()">Анализ</button>
   <p style="position: relative; left: 800px; top: 750px;" id="message"></p>
     <script>
-        function checkInput() {
-            // Получаем введённый текст
-            const userInput = document.getElementById('userInput').value;
+        const phrases = {
+    "привет": "Привет! Как дела?",
+    "пока": "До свидания! Удачи!",
+    "секрет": "Вы нашли секретное слово!",
+    "как дела": "У меня всё отлично, спасибо!",
+    "что нового": "Ничего особенного, а у вас?"
+};
 
-            // Получаем элемент для вывода сообщения
-            const messageElement = document.getElementById('message');
-
-            // Проверяем введённый текст
-            if (userInput === "Убийца") {
-                messageElement.textContent = "https://youtu.be/dQw4w9WgXcQ?si=PDH7uftigo4O9pyf";
-                messageElement.style.color = "green"; // Меняем цвет текста
-            } else {
-                messageElement.textContent = "Попробуйте ещё раз.";
-                messageElement.style.color = "red"; // Меняем цвет текста
-            }
-        }
+const message = phrases[userInput] || "Я не понимаю эту фразу. Попробуйте ещё раз.";
+messageElement.textContent = message;
+messageElement.style.color = message === "Я не понимаю эту фразу. Попробуйте ещё раз." ? "red" : "green";
     </script>
 </body>
     <body style="background-color: black;">
