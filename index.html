@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>КРЕНДИ</title>
+    <title>КРНЕДИ</title>
+<head>
 <body>
-    <h1>Связаться</h1>
-    <input type="text" id="userInput" placeholder="Связаться">
-    <button onclick="checkInput()">Помолиться</button>
+    <h1>Введите текст</h1>
+    <input type="text" id="userInput" placeholder="Введите текст">
+    <button onclick="checkInput()">Анализ</button>
     <p id="message"></p> <!-- Здесь появится сообщение -->
+
     <script>
         function checkInput() {
             // Получаем введённый текст
@@ -18,15 +19,21 @@
             const messageElement = document.getElementById('message');
 
             // Проверяем введённый текст
-            if (userInput === "отвёртка") {
-                messageElement.textContent = "Мы ждём тебя";
+            if (userInput === "секрет") {
+                messageElement.textContent = "Правильно! Вы ввели секретное слово.";
                 messageElement.style.color = "green"; // Меняем цвет текста
             } else {
-                messageElement.textContent = "НЕПРАВИЛЬНО";
+                messageElement.textContent = "Неправильно. Попробуйте ещё раз.";
                 messageElement.style.color = "red"; // Меняем цвет текста
             }
         }
     </script>
+    
+</body>
+<body>
+    <input type="text" id="userInput" placeholder="Введите текст" class="moved-input">
+</body>
+</html>
 </body>
 </html>
     <body style="background-color: black;">
