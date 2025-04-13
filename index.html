@@ -1,31 +1,141 @@
 <!DOCTYPE html>
- <html>
-   <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>ПВЁСОЙТЭ)</title>
- <head>
- <body>
-   <div class="container" style="display:flex; align-items:center; justify-content:center;"
-  <h1>Введите текст</h1>
-     <input type="text" id="userInput" placeholder="Напиши мне)" style="position: relative; left: 800px; top: 750px;">
-     <button style="position: relative; left: 800px; top: 750px;" onclick="checkInput()">Анализ</button>
-     <input type="text" id="userInput" placeholder="Напиши мне)"> //style="position: relative; left: 800px; top: 750px;"
-     <button onclick="checkInput()">Ввод</button> //style="position: relative; left: 800px; top: 750px;"
-   <p style="position: relative; left: 800px; top: 750px;" id="message"></p>
-   <script type="text/javascript">
- document.onkeydown = function(e) {
- @@ -147,13 +148,6 @@
-     </body>
- </head>
-     <p style="font-family: Comic Sans Ms; color: red;font-size: 50px>
-     </p>
-         <img src="Второй.png" 
-         <img src="Всем привет.jpg" width="500" style="position: relative; left: x ; top: 5px;">
-         <img src="отвёрточка.gif" width="500" style="position: relative; left: 800px ; top: 2px;">
-         <img src="Секретик.png" width="700" style="position: relative; left: 0px ; top: 2000px;">
-         <img src="Первый.png" width="700" style="position: relative; left : 4px ; top: -500px;">
-         <img src="Второй.png" width="600" style="position: relative; left: 600px ; top: -500px;">
-     </p>
-    
- </body>
- </html>
+<html>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арг</title>
+<head>
+<body>
+  <div class="container" style="width: 1200px; height: 650px; display:flex; align-items:center; justify-content:center;">
+    <input type="text" id="userInput" placeholder="Напиши мне)">
+    <button onclick="checkInput()">Ввод</button> 
+  </div>
+  <p style="position: relative; left: 800px; top: 750px;" id="message"></p>
+  <script type="text/javascript">
+document.onkeydown = function(e) {
+
+</script>
+  <script>
+        // Массив с фразами и сообщениями
+        const phrases = [
+            { phrase: "Убийца", message: "https://youtu.be/dQw4w9WgXcQ?si=PDH7uftigo4O9pyf" },
+            { phrase: "кто убийца", message: "https://youtu.be/dQw4w9WgXcQ?si=PDH7uftigo4O9pyf" },
+            { phrase: "убийца родиона", message: "https://youtu.be/dQw4w9WgXcQ?si=PDH7uftigo4O9pyf" },
+            { phrase: "Автор Пидор", message: "https://surl.li/kgrgtg" },
+            { phrase: "Борат", message: "Кто?" },
+            { phrase: "Эм", message: "Дождь" },
+            { phrase: "Эмануэль Кайседо", message: "Дождь" },
+            { phrase: "Хонас Васкез", message: "Привет,Дружище!" },
+            { phrase: "Михаил Бахтеев", message: "Фу" },
+           { phrase: "Какигод", message: "Фу" },
+            { phrase: "Каkigod", message: "Фу" },
+            { phrase: "Как дела", message: "Хорошо, а у тебя?" },
+            { phrase: "Как дела?", message: "Хорошо, а у тебя?" },
+            { phrase: "Хорошо", message: "Это круто, но что это сзади тебя" },
+          { phrase: "Квасд", message: "Клавиатурой ударился?" },
+            { phrase: "Штайнер", message: "Странно" },
+            { phrase: "Альберт Бабенберг", message: "Странно" },
+            { phrase: "Руслан", message: "..." },
+            { phrase: "Райнер Гослинг", message: "..." },
+           { phrase: "Эрик Вайс", message: "https://youtu.be/Ds14zhfHEvE?si=waKytiSgRa7kAJhW" },
+            { phrase: "Казуити Сода", message: "Привет!" },
+            { phrase: "Да", message: "Пизда" },
+            { phrase: "Нет", message: "Пидора ответ" },
+            { phrase: "Шлюхи аргумент", message: "Хуй" },
+            { phrase: "Бебич", message: "Шкебеде" },
+          { phrase: "bebich123", message: "Шкебеде" },
+            { phrase: "Финни Шарлот", message: "Шкебеде" },
+            { phrase: "Resonance", message: "Друг" },
+            { phrase: "Резонанс", message: "Друг" },
+            { phrase: "Йохан Либерт", message: "Друг" },
+           { phrase: "Билл Шифр", message: "Не люблю геометрию" },
+            { phrase: "Гравити Фоллз", message: "Не выйдет" },
+            { phrase: "Пароль123", message: "Разгадал, возьми пирожок с полки" },
+            { phrase: "password123", message: "Разгадал, возьми пирожок с полки" },
+            { phrase: "Эл", message: "АААА ЗАГОВОРЫ" },
+            { phrase: "Эллиот", message: "АААА ЗАГОВОРЫ" },
+          { phrase: "Игорь", message: "АААА ЗАГОВОРЫ" },
+            { phrase: "Сквозь Звезды", message: "Хуйня" },
+            { phrase: "Генри Гиммер", message: "Ненавижу цвет фона" },
+            { phrase: "Гидро", message: "Ненавижу цвет фона" },
+            { phrase: "Войцех Градецкий", message: "1" },
+           { phrase: "Войцех", message: "1" },
+            { phrase: "Лаура Коннорз", message: "Смерть" },
+            { phrase: "Лаура", message: "Смерть" },
+            { phrase: "Джейс Стоун", message: "Проблемы?" },
+            { phrase: "Джейс", message: "Проблемы?" },
+            { phrase: "Энди Маск", message: "Ты дебил?" },
+          { phrase: "Энди", message: "Ты дебил?" },
+            { phrase: "Шеррил Маск", message: "Не помню такую" },
+          { phrase: "Шеррил", message: "Не помню такую" },
+            { phrase: "Мэй Гонзалез", message: "Yes, honey" },
+            { phrase: "Мэй", message: "Yes, honey" },
+            { phrase: "Женя", message: "Йоу" },
+            { phrase: "Максимилиан Фостер", message: "Йоу" },
+           { phrase: "Отвёртка", message: "Лучший инструмент" },
+            { phrase: "Отвертка", message: "Лучший инструмент" },
+            { phrase: "Зуб", message: "Улика" },
+            { phrase: "Крушение", message: "О как" },
+            { phrase: "Кайрос", message: "Дом" },
+            { phrase: "Hesoyam", message: "Кидай скрин автору, получи бонус" },
+          { phrase: "f12", message: "Ладно" },
+            { phrase: "Тайна", message: "I...am steve" },
+            { phrase: "Граница", message: "S2FyYWthcw==" },
+            { phrase: "Владимир", message: "11010000 10111101 11010000 10110000 11010000 10111001 11010000 10110100 11010001 10000011 00100000 11010000 10111010 11010000 10110000 11010000 10110110 11010000 10110100 11010000 10111110 11010000 10110011 11010000 10111110 00101110 00101110 00101110 00100000 11010000 10111000 00100000 11010000 10110010 11010000 10110000 11010001 10000001 00100000 11010001 10000010 11010000 10111110 11010000 10110110 11010000 10110101" },
+            { phrase: "Зефирка", message: "Милаха" },
+           { phrase: "караганда", message: "0J/Qu9C+0YnQsNC00Ywg0LPQsNCz0LDRgNC40L3QsA==" },
+            { phrase: "Лодочник", message: "Вмешательство" },
+            { phrase: "Висячие сады", message: "Ад для аллергиков" },
+            { phrase: "Туманные Прерии", message: "Пейзаж в окне опять застыл Туман, как в фильме Сайлент Хилл Всё тот же скучный, надоевший вид" },
+            { phrase: "Сосал?", message: "да" },
+            { phrase: "Река", message: "Тайна на глубине" },
+          { phrase: "Родион", message: "Где... я? Так темно... я умер?" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+           { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+           { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "", message: "" },
+            { phrase: "Ничего", message: "Обернись" },
+            { phrase: "Бу", message: "ААААААААААААААААААААААААААААААААААААААААААА(скример)" }
+        ];
+
+        function checkInput() {
+            // Получаем введённый текст и приводим к нижнему регистру
+            const userInput = document.getElementById('userInput').value.toLowerCase();
+
+            // Получаем элемент для вывода сообщения
+            const messageElement = document.getElementById('message');
+
+            // Ищем совпадение в массиве
+            const foundPhrase = phrases.find(item => userInput.includes(item.phrase.toLowerCase()));
+
+            if (foundPhrase) {
+                messageElement.textContent = foundPhrase.message; // Выводим сообщение
+                messageElement.style.color = "green"; // Меняем цвет текста
+            } else {
+                messageElement.textContent = "Хуйня, переписывай";
+                messageElement.style.color = "red";
+            }
+        }
+    </script>
+</body>
+    <body style="background-color: #222; display: flex; justify-content:center; align-items:center;">
+    </body>
+</head>
+    <p style="font-family: Comic Sans Ms; color: red;font-size: 50px>
+   
+</body>
+</html>
