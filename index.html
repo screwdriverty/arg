@@ -11,6 +11,21 @@
     <p id="message"></p>
   </div>
   <script type="text/javascript">
+document.onkeydown = function(e) {
+if(event.keyCode == 123) {
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+return false;
+}
+}
+</script>
   <script>
         // Массив с фразами и сообщениями
         const phrases = [
@@ -74,15 +89,15 @@
             { phrase: "Крушение", message: "О как" },
             { phrase: "Кайрос", message: "Дом" },
             { phrase: "Hesoyam", message: "Кидай скрин автору, получи бонус" },
-          { phrase: "Родион", message: "Я....  умер?" },
-            { phrase: "Лодочник", message: "Вмешательство" },
-            { phrase: "Сосал?", message: "Да" },
-            { phrase: "Арг", message: "0J/Qu9C+0YnQsNC00Ywg0LPQsNCz0LDRgNC40L3QsA==" },
-            { phrase: "Адам Фрэнсис", message: "Что?... Где я?...Я умер" },
-           { phrase: "Владимир", message: "Найду и вас..." },
-            { phrase: "", message: "" },
-            { phrase: "", message: "" },
-            { phrase: "", message: "" },
+          { phrase: "Родион", message: "Смерть" },
+            { phrase: "Адам Фрэнсис", message: "Что?.. Где я?... Я умер?" },
+            { phrase: "Владимир", message: "И вас найду" },
+            { phrase: "Сосал?", message: "да" },
+            { phrase: "Висячие Сады", message: "Ад для аллергиков" },
+           { phrase: "арг", message: "0J/Qu9C+0YnQsNC00Ywg0LPQsNCz0LDRgNC40L3QsA==" },
+            { phrase: "Падающий армянин", message: "Я самый лучший" },
+            { phrase: "Небоскреб", message: "Когда нибудь сделаю" },
+            { phrase: "Лодочник", message: "вмешательство" },
             { phrase: "", message: "" },
             { phrase: "", message: "" },
           { phrase: "", message: "" },
